@@ -1,7 +1,12 @@
 # Overview
-Welcome to my analysis of the data job market. This project was driven by my desire to better navigate and understand the job market while also improving my skills in exploratory data analysis.
+This project explores the job market data to gain insights into hiring trends and essential skills while strengthening my expertise in Exploratory Data Analysis (EDA). Inspired by [Luke Barousse's Python Course](https://www.youtube.com/watch?v=wUSDVGivd-8&t=22916s), I expanded upon the original analysis by incorporating additional data quality checks and preprocessing techniques.
 
-The data sourced from [Luke Barousse's Python Course](https://www.youtube.com/watch?v=wUSDVGivd-8&t=22916s) which provides a foundation for my analysis, containing detailed information on job titles, locations, and essential skills. 
+Key improvements include:
+
+- Analyzing dataset structure, percentage, and count of null values
+- Dropping columns with more than 60% null values
+Removing rows with null values and duplicates to ensure data integrity
+- By enhancing data cleaning and preprocessing techniques, this project deepened my understanding of job market patterns and improved my Python-based EDA skills.
 
 # The Questions
 Below are the questions I want to answer in my project:
