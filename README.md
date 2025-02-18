@@ -3,10 +3,11 @@ This project explores the job market data to gain insights into hiring trends an
 
 Key improvements include:
 
-- Analyzing dataset structure, percentage, and count of null values
-- Dropping columns with more than 60% null values
-Removing rows with null values and duplicates to ensure data integrity
-- By enhancing data cleaning and preprocessing techniques, this project deepened my understanding of job market patterns and improved my Python-based EDA skills.
+- Analyzing dataset structure, percentage, and count of null values;
+- Dropping columns with more than 60% null values; and
+- Removing rows with null values and duplicates to ensure data integrity.
+
+By enhancing data cleaning and preprocessing techniques, this project deepened my understanding of job market patterns and improved my Python-based EDA skills.
 
 # The Questions
 Below are the questions I want to answer in my project:
