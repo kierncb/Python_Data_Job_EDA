@@ -49,7 +49,6 @@ df.to_csv("cleaned_data_jobs.csv", index=False)
 This section provides a comprehensive overview of the steps taken to address the stated questions, along with the corresponding results and key insights.
 
 ## 1. Which job role has the highest number of job offers?
-To determine the job role with the highest number of job offers, I extracted the values from the `job_title_short` column and used `value_counts()` to count the job postings for each title. The results were then stored in a new DataFrame, `df_job_role`.
 
 ### Visualize Data
 
@@ -71,7 +70,6 @@ plt.show()
 - Senior Data Engineer, Senior Data Scientist, and Senior Data Analyst have significantly fewer job offers than their junior counterparts. This suggests that entry and mid-level roles are more widely available compared to senior positions.
 
 ## 2. Which country has the highest number of job offers?
-To identify the country with the highest number of job offers, I extracted the values from the `job_country` column and used `value_counts()` to count the job postings for each country. The top 10 results were then stored in a new DataFrame, `df_job_country`.
 
 ### Visualize Data
 
@@ -92,7 +90,6 @@ plt.show()
 - The overwhelming number of jobs in the U.S. suggests a strong and diverse job market, possibly driven by a large economy, technological advancements, and a high concentration of multinational companies. This dominance may indicate greater employment opportunities but also higher competition.
 
 ## 3. Which companies have posted the most job openings?
-To identify the companies with the most job openings, I extracted the values from the `company_name` column and used `value_counts()` to count the job postings for each company. The top 10 results were then stored in a new DataFrame, `df_companies`.
 
 ### Visualize Data
 
@@ -115,7 +112,6 @@ plt.show()
 - The companies listed span various industries, including finance (Citi, Capital One), healthcare (UnitedHealth Group), retail (Walmart), and consulting (Booz Allen Hamilton). This suggests that job opportunities exist across multiple sectors.
 
 ## 4. What is the most commonly used job posting platform?
-To identify the most common job posting platform, I extracted the values from the `job_via` column and used `value_counts()` to count the job postings for each platform. The results were then stored in a new DataFrame, `df_platform`.
 
 ### Visualize Data
 ```python
@@ -136,8 +132,6 @@ plt.show()
 - While LinkedIn has the most jobs, other factors like industry focus, job quality, and user base may impact which platform is best for job seekers.
 
 ## 5. What percentage of job postings offer work-from-home options, require a degree, or provide health insurance?
-
-I first created a dictionary, `dict_colum`n, to map column names to more readable titles. Then, I initialized a figure with three subplots using `plt.subplots()`, ensuring that each pie chart would be displayed side by side. I also used `autopct='%1.1f%%'` to display the percentages on the charts.
 
 ### Visualize Data
 ```python
@@ -168,8 +162,6 @@ plt.show()
 - Only 12.2% of job postings include health insurance as a benefit, while the majority (87.8%) do not. This highlights a potential gap in employee benefits, which could influence job seekers' decisions when evaluating job offers. 
 
 ## 6. What are the most in-demand skills for the top three most popular data roles in the US?
-To identify the most in-demand skills for the top three most popular data roles, I first filtered the dataset to include only the most common positions. Then, I extracted the top five skills for each of these roles. This analysis highlights the most popular job titles and their key skills, helping me determine which skills to focus on based on my target role.
-
 
 ### Visualize Data
 
@@ -194,7 +186,6 @@ plt.show()
 - Python is the most in-demand skill for Data Scientists and a crucial skill for Data Engineers. This suggests that Data Engineers and Data Scientists need strong coding skills, while Data Analysts can focus more on querying and visualization.
 
 ## 7. What are the top trending skills for data engineers in the US?
-To analyze skill trends for Data Engineers in 2023, I filtered out Data Engineer positions and grouped the skills by the month of the job postings. This allowed me to identify the top five skills for Data Engineers each month, revealing how their popularity evolved throughout the year.
 
 ### Visualize Data
 
