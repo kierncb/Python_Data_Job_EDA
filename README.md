@@ -182,7 +182,7 @@ plt.ylabel('')
 plt.show()
 ```
 #### Results
-![job-hiring_platform](data_visualization\job-hiring_platform.png)
+![job-hiring_platform](data_visualization/job-hiring_platform.png)
 
 *Bar graph showing the job posting platform with the highest number of job offers.*
 
@@ -219,7 +219,7 @@ for i, (column, title) in enumerate(dict_column.items()):
 plt.show()
 ```
 #### Results
-![job-benefits](data_visualization\job-benefits.png)
+![job-benefits](data_visualization/job-benefits.png)
 
 *Pie charts showing the distribution of job postings based on work-from-home availability, degree requirements, and health insurance offerings.*
 
@@ -253,7 +253,7 @@ plt.show()
 ```
 
 #### Results
-![Question_6](data_visualization\job_title-trend.png)
+![job_title-trend](data_visualization/job_title-trend.png)
 
 *Bar graph visualizing the monthly trendof the top 3 data roles.*
 
@@ -299,7 +299,7 @@ fig.tight_layout(h_pad=.8)
 plt.show()
 ```
 ### Results
-![job_skill-job_title](data_visualization\job_skill-job_title.png)
+![job_skill-job_title](data_visualization/job_skill-job_title.png)
 
 *Bar graph visualizing the likelihood of skills requested in US job postings in 2023*
 
