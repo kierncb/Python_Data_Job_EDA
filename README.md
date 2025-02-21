@@ -219,7 +219,7 @@ for i, (column, title) in enumerate(dict_column.items()):
 plt.show()
 ```
 #### Results
-![job-venefits](data_visualization\job-benefits.png)
+![job-benefits](data_visualization\job-benefits.png)
 
 *Pie charts showing the distribution of job postings based on work-from-home availability, degree requirements, and health insurance offerings.*
 
