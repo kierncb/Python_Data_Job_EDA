@@ -82,7 +82,7 @@ df['job_posted_date'] = pd.to_datetime(df['job_posted_date'])  # Convert to date
 
 ### 1. Which job role had the highest percentage of job postings?
 
-#### Data Visualization
+#### Data Visualization:
 ```python
 # Plot
 sns.set_theme(style='ticks')
@@ -102,7 +102,7 @@ plt.xlabel('Jobs (%)', weight='bold')
 plt.ylabel('')
 plt.show()
 ```
-#### Result
+#### Result:
 ![job-job_title](data_visualization/job-job_title.png)
 
 *Bar graph displaying the job role with the highest number of job offers.*
@@ -112,7 +112,7 @@ plt.show()
 
 ### 2. Which country recorded the highest number of job openings?
 
-#### Data Visualization
+#### Data Visualization:
 
 ```python
 # Plot
@@ -134,7 +134,7 @@ plt.ylabel('')
 plt.show()
 ```
 
-#### Results
+#### Results:
 ![job-hiring_location](data_visualization/job-hiring_location.png)
 
 *Bar graph showing the country with the highest number of job offers*
@@ -146,7 +146,7 @@ plt.show()
 
 ### 3. Which companies were the top recruiters based on job postings?
 
-#### Data Visualization
+#### Data Visualization:
 
 ```python
 # Plot
@@ -168,8 +168,8 @@ plt.ylabel('')
 plt.show()
 ```
 
-#### Results
-![job-hiring_company](data_visualization\job-hiring_company.png)
+#### Results:
+![job-hiring-company](data_visualization/job-hiring_company.png)
 
 *Bar graph showing the company with the highest number of job offers.*
 
@@ -181,7 +181,7 @@ plt.show()
 
 ### 4. Which job posting platform is used the most by employers?
 
-#### Data Visualization
+#### Data Visualization:
 ```python
 # Plot
 sns.set_theme(style='ticks')
@@ -201,7 +201,7 @@ plt.xlabel('Jobs (%)', weight='bold')
 plt.ylabel('')
 plt.show()
 ```
-#### Results
+#### Results:
 ![job-hiring_platform](data_visualization/job-hiring_platform.png)
 
 *Bar graph showing the job posting platform with the highest number of job offers.*
@@ -215,7 +215,7 @@ plt.show()
 
 ### 5. What percentage of job postings offer work-from-home options, require a degree, or provide health insurance?
 
-#### Data Visualization
+#### Data Visualization:
 ```python
 # Dictionary mapping dataset column names to more readable chart titles
 dict_column = {
@@ -240,7 +240,7 @@ for i, (column, title) in enumerate(dict_column.items()):
 
 plt.show()
 ```
-#### Results
+#### Results:
 ![job-benefits](data_visualization/job-benefits.png)
 
 *Pie charts showing the distribution of job postings based on work-from-home availability, degree requirements, and health insurance offerings.*
@@ -255,7 +255,7 @@ plt.show()
 
 ### 6. What are the key trends and patterns in job postings for Data Analyst, Data Engineer, and Data Scientist roles over time?
 
-#### Visualize Data
+#### Data Visualization:
 
 ```python
 # Set theme
@@ -275,7 +275,7 @@ sns.despine()
 plt.show()
 ```
 
-#### Results
+#### Results:
 ![job_title-trend](data_visualization/job_title-trend.png)
 
 *Bar graph visualizing the monthly trendof the top 3 data roles.*
@@ -289,7 +289,7 @@ plt.show()
 
 ### 7. What are the top trending skills for data engineers in the US?
 
-#### Data Visualization
+#### Data Visualization:
 
 ```python
 # Create subplots with the number of rows equal to the number of job titles
@@ -323,7 +323,7 @@ fig.tight_layout(h_pad=.8)
 
 plt.show()
 ```
-#### Results
+#### Results:
 ![job_skill-job_title](data_visualization/job_skill-job_title.png)
 
 *Bar graph visualizing the likelihood of skills requested in US job postings in 2023*
@@ -339,7 +339,7 @@ plt.show()
 - Advanced modeling and machine learning drive Data Scientist requirements.
 
 # Recommendation
-**Strategic Recommendations for Job Seekers in Data Roles:**
+### **Strategic Recommendations for Job Seekers in Data Roles:**
 
 1. **Focus on Core Skills First:** Prioritize learning SQL and Python while strengthening Excel for entry-level roles.
 
