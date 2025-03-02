@@ -7,13 +7,13 @@
 - [Analytical Focus](#analytical-focus)
 - [Data Preparation and Cleanup](#data-preparation-and-cleanup)
 - [Insight Deep-Dive](#insight-deep-dive)
-    - [Which job role had the highest percentage of job postings?](#1-which-job-role-had-the-highest-percentage-of-job-postings)
-    - [Which country recorded the highest number of job openings?](#2-which-country-recorded-the-highest-number-of-job-openings)
-    - [Which companies were the top recruiters based on job postings?](#3-which-companies-were-the-top-recruiters-based-on-job-postings)
-    - [Which job posting platform is used the most by employers?](#4-which-job-posting-platform-is-used-the-most-by-employers)
-    - [What percentage of job postings offer work-from-home options, require a degree, or provide health insurance?](#5-what-percentage-of-job-postings-offer-work-from-home-options-require-a-degree-or-provide-health-insurance)
-    - [What are the key trends and patterns in job postings for Data Analyst, Data Engineer, and Data Scientist roles over time?](#6-what-are-the-key-trends-and-patterns-in-job-postings-for-data-analyst-data-engineer-and-data-scientist-roles-over-time)
-    - [What are the most in-demand skills for the top three most popular data roles in the US?](#7-what-are-the-top-trending-skills-for-data-engineers-in-the-us)
+    - [Job Hiring Distribution by Job Title](#1-which-job-role-had-the-highest-percentage-of-job-postings)
+    - [Geographic Distribution of Job Openings](#2-which-country-recorded-the-highest-number-of-job-openings)
+    - [Company-wise Hiring Distribution](#3-which-companies-were-the-top-recruiters-based-on-job-postings)
+    - [Most Popular Job Posting Platforms Among Employers](#4-which-job-posting-platform-is-used-the-most-by-employers)
+    - [Percentage of Job Condition and Benefits](#5-what-percentage-of-job-postings-offer-work-from-home-options-require-a-degree-or-provide-health-insurance)
+    - [USA Job Market Trends in 2023](#6-what-are-the-key-trends-and-patterns-in-job-postings-for-data-analyst-data-engineer-and-data-scientist-roles-over-time)
+    - [Likelihood of Skills Requested in US Job Postings](#7-what-are-the-top-trending-skills-for-data-engineers-in-the-us)
 - [Recommendation](#recommendation)
 - [Conclusion](#conclusion)
 
@@ -262,16 +262,21 @@ plt.show()
 sns.set_theme(style='ticks')
 
 # Create the line plot
-ax = sns.lineplot(data=job_percentages.iloc[:, :5], dashes=False, palette='tab10')
-
-# Formatting
-plt.xlabel('2023', weight='bold')
-plt.ylabel('Job Postings (%)',weight='bold')
-plt.title('Job Posting Percentage Trends Over Time', fontsize=15, weight='bold', pad=16)
-
-# Set and format lables
-plt.legend(loc='upper left', bbox_to_anchor=(1, 1))
+ax = sns.lineplot(data=job_counts_melted, x='year_month', y='job_counts', hue='job_title', legend=False)
 sns.despine()
+
+# Add labels directly on the lines (with position adjustment)
+label_offset = {'Data Analyst': 1, 'Data Engineer': -0.5, 'Data Scientist': -1.5}
+
+for job_title in job_counts_melted['job_title'].unique():
+    subset = job_counts_melted[job_counts_melted['job_title'] == job_title]
+    last_point = subset.iloc[-1]
+    offset = label_offset.get(job_title, 0)  # Adjust position for overlapping labels
+    plt.text(last_point['year_month'], last_point['job_counts'] + offset, job_title, size=9)
+
+plt.title('USA Job Market Trends in 2023', pad=15, fontsize=15, weight='bold')
+plt.ylabel('Job Posting Percentage')
+plt.xlabel('2023')
 plt.show()
 ```
 
