@@ -18,9 +18,9 @@
 - [Conclusion](#conclusion)
 
 # Project Background
-Navigating career choices can be daunting, especially for college students preparing to enter the workforce. As someone pursuing a data-related career, I recognize the importance of developing key skills early to stay competitive in the industry. This realization led me to ask: *Which skills should I focus on now to maximize my future success?*
+Navigating career choices can be challenging, especially for college students preparing to enter the workforce. As a student pursuing a data-related career, I understand the importance of developing key skills early to stay competitive. This led me to ask: *Which skills should I focus on now to succeed in the future?*
 
-This project is designed not only as a personal initiative for skill enhancement but also as a resource for other students aiming to build a strong foundation in data-related fields. By identifying essential competencies and gaining hands-on experience, aspiring data professionals can boost their confidence and preparedness for job opportunities. Ultimately, this project seeks to bridge the gap between academic learning and industry expectations, ensuring that students enter the workforce equipped with relevant and in-demand skills.
+This project serves both as a personal effort to enhance my skills and as a guide for other students looking to build a solid foundation in data-related fields. By identifying essential skills and gaining practical experience, aspiring data professionals can increase their confidence and readiness for job opportunities. Ultimately, this project aims to bridge the gap between academic learning and industry demands, helping students enter the workforce with relevant and in-demand skills.
 
 # Data Overview
 The [data_jobs](https://huggingface.co/datasets/lukebarousse/data_jobs) dataset was sourced from Data Analyst Luke Barousse. It contains real job posting data collected through his website in 2023. The dataset consists of 786,000 rows and 17 columns.
