@@ -297,35 +297,38 @@ plt.show()
 #### Data Visualization:
 
 ```python
-# Create subplots with the number of rows equal to the number of job titles
-fig, ax = plt.subplots(len(job_titles), 1)  
+fig, ax = plt.subplots(len(job_titles), 1)
 
-# Loop through each job title to generate a bar plot
+sns.set_theme(style='ticks')
+
+from matplotlib.ticker import FuncFormatter
+
+def k_format(x, _):
+    return f"{int(x / 1000)}k"
+
 for i, job_title in enumerate(job_titles):
-    # Filter the top 5 most requested skills for the current job title
-    df_plot = df_skills_perc[df_skills_perc['job_title_short'] == job_title].head(5)
-
-    # Create a horizontal bar plot of skill percentages
-    sns.barplot(data=df_plot, x='skill_percent', y='job_skills',  ax=ax[i],hue='skill_count', palette='dark:b_r'  )
-
-    # Apply common formatting to all subplots
+    df_plot = df_skills_count[df_skills_count['job_title_short'] == job_title].head(5)[::-1]
+    sns.barplot(data=df_plot, x='skill_count', y='job_skills', ax=ax[i], hue='skill_count', palette='dark:b_r')
     ax[i].set_title(job_title)
+    ax[i].invert_yaxis()
     ax[i].set_ylabel('')
     ax[i].set_xlabel('')
     ax[i].get_legend().remove()
-    ax[i].set_xlim(0, 100)
+    ax[i].set_xlim(0, 50000) # make the scales the same
+
+    # Apply k-format to the x-axis
+    ax[i].xaxis.set_major_formatter(FuncFormatter(k_format))
 
     # Remove x-axis tick labels for all subplots except the last one
-    if i != len(job_titles) - 1:
-        ax[i].set_xticks([])
+    if i < len(job_titles) - 1:
+        ax[i].set_xticklabels([])
 
-    # Add percentage labels to the bars
-    for n, v in enumerate(df_plot['skill_percent']):
-        ax[i].text(v + 1, n, f'{v:.0f}%', va='center')
+    # Add labels to the bars
+    for bar in ax[i].containers:
+        ax[i].bar_label(bar, padding=3, fmt=lambda x: k_format(x, None))
 
-fig.suptitle('Likelihood of Skills Requested in US Job Postings', fontsize=15, weight='bold')
-fig.tight_layout(h_pad=.8)
-
+fig.suptitle('Most In-Demand Skills Across Top 3 US Job Roles', fontsize=15, weight='bold')
+fig.tight_layout(h_pad=0.5) # fix the overlap
 plt.show()
 ```
 #### Results:
