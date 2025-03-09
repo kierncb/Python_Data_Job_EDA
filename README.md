@@ -1,4 +1,4 @@
-# Navigating the Data Industry: A Deep Dive into Job Market Trends
+# Exploring Data Industry Job Trends
 
 ### **Table of Contents:**
 
